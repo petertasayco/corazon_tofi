@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz 3 Años Mi Amor ❤️</title>
+    <style>
+        body {
+            background: #ffe6ea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #d40057;
+            text-align: center;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .contenedor img {
+            height: 500px;
+            width: 360px;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        }
+
+        pre {
+            font-size: 16px;
+            color: #ff0055;
+            font-weight: bold;
+            line-height: 18px;
+            text-align: center;
+            white-space: pre;
+        }
+
+      #fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* para que no interfiera con clicks */
+    z-index: -1; /* se coloca detrás de todo */
+}
+
+#fireworks canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <div id="fireworks">
+  <canvas id="fireworksCanvas"></canvas>
+</div>
+
+
+    </div>
+    <h1>❤️ Feliz 3 Años Mi Amor ❤️</h1>
+    <div class="contenedor"> <img src="images/foto1.jpeg">
+        <pre id="asciiCorazon"></pre> <img src="images/foto2.jpeg">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
