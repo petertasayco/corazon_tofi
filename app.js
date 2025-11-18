@@ -295,3 +295,10 @@ if (document.getElementById("fireworksCanvas")) {
     loop();
 }
 
+const btnLeerMas = document.getElementById("btnLeerMas");
+
+if (btnLeerMas) {
+    btnLeerMas.addEventListener("click", () => {
+        window.location.href = "carta.html";
+    });
+}
