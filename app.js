@@ -1,9 +1,9 @@
-// Registrar botones solo si estamos en index.html
+
 if (document.getElementById("btnEntrar")) {
     document.getElementById("btnEntrar").addEventListener("click", validarNombre);
 }
 
-// ------- PANTALLA DE ENTRADA --------
+
 function validarNombre() {
     const nombre = document.getElementById("nombre").value.trim().toLowerCase();
 
@@ -12,12 +12,12 @@ function validarNombre() {
         return;
     }
 
-    // Ir a la página del corazón
+    
     window.location.href = "corazon.html";
 }
 
 
-// ------- PANTALLA DEL CORAZÓN --------
+
 if (document.getElementById("asciiCorazon")) {
     generarCorazon();
 }
@@ -63,109 +63,7 @@ function generarCorazon() {
 }
 
 
-//corazon.html
 
-// if (document.getElementById("fireworksCanvas")) {
-//     const canvas = document.getElementById("fireworksCanvas");
-//     const ctx = canvas.getContext("2d");
-
-//     // Ajustar tamaño
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-
-//     window.addEventListener("resize", () => {
-//         canvas.width = window.innerWidth;
-//         canvas.height = window.innerHeight;
-//     });
-
-//     class Firework {
-//         constructor(x, y, color) {
-//             this.x = x;
-//             this.y = y;
-//             this.particles = [];
-//             this.color = color;
-//             for (let i = 0; i < 30; i++) {
-//                 this.particles.push({
-//                     x: x,
-//                     y: y,
-//                     vx: Math.random() * 6 - 3,
-//                     vy: Math.random() * 6 - 3,
-//                     alpha: 1,
-//                     radius: Math.random() * 3 + 2
-//                 });
-//             }
-//         }
-
-//         update() {
-//             for (let p of this.particles) {
-//                 p.x += p.vx;
-//                 p.y += p.vy;
-//                 p.vy += 0.05; // gravedad
-//                 p.alpha -= 0.02;
-//             }
-//             this.particles = this.particles.filter(p => p.alpha > 0);
-//         }
-
-//         draw() {
-//             for (let p of this.particles) {
-//                 ctx.beginPath();
-//                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-//                 ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${p.alpha})`;
-//                 ctx.fill();
-//             }
-//         }
-
-//         isDone() {
-//             return this.particles.length === 0;
-//         }
-//     }
-
-//     const fireworks = [];
-
-//     function randomColor() {
-//         return {
-//             r: Math.floor(Math.random() * 256),
-//             g: Math.floor(Math.random() * 256),
-//             b: Math.floor(Math.random() * 256)
-//         };
-//     }
-
-//   let generarFuegos = true;
-
-//    setTimeout(() => {
-//         generarFuegos = false;
-//     }, 4000);
-
-
-//     function loop() {
-//         ctx.fillStyle = "rgba(255, 230, 234, 0.2)"; // deja un rastro
-//         ctx.fillRect(0, 0, canvas.width, canvas.height);
-// if(generarFuegos){
-//     for (let i = 0; i < 2; i++) { // 2 fuegos por frame
-//     if (Math.random() < 0.5) {
-//         fireworks.push(new Firework(Math.random() * canvas.width, Math.random() * canvas.height/2, randomColor()));
-//     }
-// }
-
-// }
-        
-
-
-//         for (let f of fireworks) {
-//             f.update();
-//             f.draw();
-//         }
-
-//         // eliminar fuegos terminados
-//         for (let i = fireworks.length - 1; i >= 0; i--) {
-//             if (fireworks[i].isDone()) fireworks.splice(i, 1);
-//         }
-
-//         requestAnimationFrame(loop);
-//     }
-
-//     loop();
-// }
 
 if (document.getElementById("fireworksCanvas")) {
     const canvas = document.getElementById("fireworksCanvas");
